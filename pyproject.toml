@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "designkit-cli"
+version = "1.0.0"
+description = "🎨 Lightweight Design Token Generator & AI UI Style Engine — Zero Dependencies, TUI Preview, Multi-Format Export"
+readme = "README.md"
+authors = [
+    {name = "DesignKit Team"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Utilities",
+    "Topic :: Software Development :: Design",
+]
+keywords = ["design-tokens", "design-system", "cli", "tui", "css-variables", "ui-generator", "tailwind", "color-palette"]
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/gitstq/designkit-cli"
+Repository = "https://github.com/gitstq/designkit-cli"
+Issues = "https://github.com/gitstq/designkit-cli/issues"
+
+[project.scripts]
+designkit = "designkit:main"
+
+[project.optional-dependencies]
+tui = ["rich>=13.0.0"]
+
+[tool.setuptools.packages.find]
+include = ["designkit*"]
